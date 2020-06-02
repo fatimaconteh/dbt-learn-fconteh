@@ -2,6 +2,10 @@ version: 2
 
 version: 2
 
+source:  
+  - name: jaffle_shop
+    description: This is a replica of the Postgres database used by our app
+
 models:
   - name: customers
     description: One record per customer
@@ -35,3 +39,13 @@ models:
         tests:
           - accepted_values:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+
+  - name: orders
+    description: test test test
+    columns:
+      - name: order_id
+        description: test test test
+        tests:
+          - not_null
+          - unique
+          
