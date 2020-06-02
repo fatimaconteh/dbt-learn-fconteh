@@ -1,15 +1,39 @@
-Welcome to your new dbt project!
+### jaffle-shop-dbt
+dbt models for jaffle-shop
 
-### Using the starter project
+### Getting started
+1. Clone this github repo
+2. Install dbt following these instructions
+3. Ask your database administrator for a set of snowflake credentials. Your database administrator should run the following statements from a super user account to create your account.
 
-Try running the following commands:
-- dbt run
-- dbt test
+create user <user>
+    password = '<generate_this>'
+    default_warehouse = transforming
+    default_role = transformer;
+  
+4. Copy the example profile to your ~/.dbt folder (created when installing dbt):
+
+$ cp ./sample.profiles.yml ~/.dbt/profiles.yml
+
+5. Populate ~/.dbt/profiles.yml with the credentials you obtained in step 3:
+
+open ~/.dbt
+
+6. Verify that you can connect to your database
+
+$ dbt debug
+
+7. Verify that you can run dbt
+
+$ dbt run
+
+### Coding conventions
+This project follows Fishtown Analytics' coding conventions and git guide.
+
+### Understanding the structure of this project
+This project follows the structure set out in this article.
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](http://community.getbdt.com/) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+
+
